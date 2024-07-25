@@ -1,7 +1,8 @@
 package com.mb.dineit.observable;
 
-public interface Observable {
-    public void addObserver();
-    public void removeObserver();
-    public void notifyObservers();
+public interface Observable<T> {
+    void addObserver(Observer<T>observer);
+    void removeObserver(Observer<T> observer);
+    void notifyObservers();
+    T getData();
 }

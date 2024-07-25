@@ -1,5 +1,5 @@
 package com.mb.dineit.observable;
 
-public interface Observer {
-    public void update();
+public interface Observer<T> {
+    void update(Observable<T> observable);
 }
