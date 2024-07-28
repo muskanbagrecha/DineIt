@@ -5,12 +5,19 @@ import lombok.Getter;
 import lombok.Setter;
 
 
+@Getter
+@Setter
 @AllArgsConstructor
 public class Restaurant {
 
-    @Getter @Setter
+    public Restaurant(String name, boolean isAvailable){
+        this.name = name;
+        this.isAvailable = isAvailable;
+    }
+
     private String id;
 
-    @Getter @Setter
     private String name;
+
+    private boolean isAvailable;
 }
