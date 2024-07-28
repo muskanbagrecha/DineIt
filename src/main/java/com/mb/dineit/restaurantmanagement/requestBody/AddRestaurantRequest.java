@@ -1,4 +1,4 @@
-package com.mb.dineit.restaurantmanagement.service;
+package com.mb.dineit.restaurantmanagement.requestBody;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
