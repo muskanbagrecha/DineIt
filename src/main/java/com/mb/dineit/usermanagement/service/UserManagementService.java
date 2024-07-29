@@ -1,5 +1,6 @@
 package com.mb.dineit.usermanagement.service;
 
+import com.mb.dineit.exceptions.UserNotFoundException;
 import com.mb.dineit.models.User;
 import com.mb.dineit.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,5 +21,9 @@ public class UserManagementService {
             System.out.println(ex);
             return false;
         }
+    }
+
+    public User findUserById(String userId){
+        return userRepository.findById(userId).orElseThrow(() -> new UserNotFoundException("User not found"));
     }
 }

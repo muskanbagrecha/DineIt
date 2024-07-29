@@ -15,6 +15,7 @@ public class User {
     private String id;
     private String username;
     private String email;
+    private String phoneNumber;
     private List<NotificationStrategy> notificationStrategies;
 
     public User(String username, String email) {
